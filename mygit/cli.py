@@ -1,4 +1,7 @@
 import argparse
+import os
+
+from . import data
 
 def main():
     # use argparse to parse arguments
@@ -19,4 +22,5 @@ def parse_args():
 
 # This command should initialize the directory by creating a new directory with current files
 def init(args):
-    print("Hello World")
+    data.init()
+    print('Initialized empty mygit repo in %s' %os.path.join(os.getcwd(), MYGIT_DIR))
